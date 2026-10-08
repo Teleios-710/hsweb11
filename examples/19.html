@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11주차 예제 19 · 객체 ↔ 문자열</title>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.7; padding: 16px; }
+    .note { padding: 10px 12px; border-left: 4px solid #102A56; background: #eef2fb; }
+    .sandbox { margin: 16px 0; padding: 12px 16px; border: 1px dashed #9aa6b8; border-radius: 8px; }
+    .sandbox h2 { font-size: 0.9rem; color: #55607a; margin: 0 0 8px; }
+  </style>
+</head>
+<body>
+  <p class="note">
+    <strong>11주차 예제 19 · 객체 ↔ 문자열</strong><br>
+    결과는 개발자도구 <strong>콘솔</strong>에서 봅니다 — F12 또는 Ctrl+Shift+I (Mac은 Cmd+Option+I).
+  </p>
+
+  <div class="sandbox">
+    <h2>연습용 화면 — 아래 코드가 손댈 요소들입니다. 마음대로 고쳐 보세요.</h2>
+    <h1 id="title">제목 h1</h1>
+    <p id="name">이름</p>
+    <p id="price">12000</p>
+    <div class="box">div.box</div>
+
+    <ul id="list" class="list">
+      <li>목록 1</li>
+      <li>목록 2</li>
+      <li>목록 3</li>
+    </ul>
+
+    <form id="myForm">
+      <input type="text" name="name" placeholder="이름">
+      <label><input type="checkbox" id="agree"> 동의합니다</label>
+      <button type="button" id="btn">버튼</button>
+    </form>
+  </div>
+
+  <script>
+    /*
+    11주차 예제 19 — 객체 ↔ 문자열
+    */
+    const obj = { name: '한신', year: 1 };
+
+    const text = JSON.stringify(obj);
+    // '{"name":"한신","year":1}'   ← 문자열
+
+    const back = JSON.parse(text);
+    // { name: '한신', year: 1 }    ← 객체로 복원
+
+    // 보기 좋게 (들여쓰기 2칸)
+    JSON.stringify(obj, null, 2);
+
+    // ⚠ JSON은 키를 반드시 큰따옴표로 감쌉니다. 함수와 undefined는 담기지 않습니다.
+  </script>
+</body>
+</html>
