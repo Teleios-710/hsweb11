@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>11주차 실습 1</title>
+  <title>11주차 실습 1 모범답안</title>
   <style>
     body { font-family: system-ui, sans-serif; line-height: 1.7; padding: 16px; }
     .note { padding: 10px 12px; border-left: 4px solid #102A56; background: #eef2fb; }
@@ -13,7 +13,7 @@
 </head>
 <body>
   <p class="note">
-    <strong>11주차 실습 1</strong><br>
+    <strong>11주차 실습 1 모범답안</strong><br>
     결과는 개발자도구 <strong>콘솔</strong>에서 봅니다 — F12 또는 Ctrl+Shift+I (Mac은 Cmd+Option+I).
   </p>
 
@@ -38,14 +38,11 @@
   </div>
 
   <script>
-    /*
-    실습 1 · 기본
+    function circleArea(r) {
+      return Math.PI * r * r;
+    }
 
-    문제: 원의 반지름을 받아 넓이를 돌려주는 함수 circleArea를 만들고, 반지름 5의 결과를 소수점 둘째 자리까지 출력하세요.
-    힌트: 넓이는 Math.PI * r * r 입니다. 소수점은 toFixed(2)로 자릅니다. 출력이 아니라 return으로 돌려주는 것이 핵심입니다.
-    꼭 들어가야 하는 것: function|=>  return  math.pi  toFixed  console.log
-    */
-    // 여기에 JavaScript를 작성하세요
+    console.log(circleArea(5).toFixed(2));
   </script>
 </body>
 </html>
